@@ -6,7 +6,7 @@ import InlineError from "../messages/InlineError";
 class LoginForm extends React.Component{
   state ={
     data:{
-      user:'',
+      username:'',
       password:''
     },
     loading: false,
@@ -32,7 +32,7 @@ class LoginForm extends React.Component{
 
   validate = (data) =>{
     const errors = {};
-    if(!data.user) errors.user = "Introduceti user";
+    if(!data.username) errors.username = "Introduceti user";
     if(!data.password) errors.password = "Introduceti parola";
     return errors;
   };
@@ -45,16 +45,16 @@ class LoginForm extends React.Component{
           <Message.Header>Oops! Ceva nu e in regula</Message.Header>
           <p>{errors.global}</p>
         </Message>}
-        <Form.Field error={!!errors.user}>
-          <label htmlFor="user">User</label>
-          <input type = "user"
-                 id="user"
-                 name="user"
-                 value={data.user}
+        <Form.Field error={!!errors.username}>
+          <label htmlFor="username">User</label>
+          <input type = "username"
+                 id="username"
+                 name="username"
+                 value={data.username}
                  onChange={this.onChange}
           />
         </Form.Field>
-        {errors.user && <InlineError text={errors.user}/>}
+        {errors.username && <InlineError text={errors.username}/>}
         <Form.Field error={!!errors.password}>
           <label htmlFor="password">Parola</label>
           <input type = "password"
