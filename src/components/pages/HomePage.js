@@ -4,10 +4,12 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actions  from '../../actions/auth';
 
-const HomePage = ({isAuthenticated, logout}) => (
+const HomePage = ({ isAuthenticated, logout }) => (
   <div>
     <h1>HomePage</h1>
-    { isAuthenticated ? <button onClick={() => logout()}>Logout</button> : <Link to="/login">Login</Link>}
+    <Link to="/menu">Main menu</Link>
+    { isAuthenticated ?
+      <button onClick={() => logout()}>Logout</button> : <Link to="/login">Login</Link>}
   </div>
 );
 
