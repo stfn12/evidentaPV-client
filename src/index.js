@@ -10,6 +10,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from "./rootReducer";
 import { userLoggedIn } from "./actions/auth";
+import setAuthorizationHeader from './utils/setAuthorizationHeader';
 
 const store = createStore(
   rootReducer,
@@ -18,6 +19,7 @@ const store = createStore(
 
 if(localStorage.evidentaPVJWT){
   const user = { token: localStorage.evidentaPVJWT};
+  setAuthorizationHeader(localStorage.evidentaPVJWT);
   store.dispatch(userLoggedIn(user));
 }
 
