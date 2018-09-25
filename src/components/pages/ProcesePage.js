@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {allProceseSelector} from '../../reducers/procese';
 import AddProcesCtA from '../ctas/AddProcesCtA';
 import SearchProcesForm from '../forms/SearchProcesForm';
-import ProcesForm from '../forms/ProcesForm';
+import EditProcesForm from '../forms/EditProcesForm';
 import {Segment} from 'semantic-ui-react';
 
 class ProcesePage extends React.Component{
@@ -14,19 +14,18 @@ class ProcesePage extends React.Component{
 
   onProcesSelect = proces => this.setState({proces});
 
-  addProces = () => console.log('hi');
+  editProces = () => console.log('hi');
 
   render(){
     return(
       <div>
-        <h1>Procese verbale</h1>
+        <h1 align="center">Procese verbale</h1>
         <AddProcesCtA />
         <Segment>
           <h1>Cauta PV</h1>
           <SearchProcesForm onProcesSelect = { this.onProcesSelect } />
-
           {this.state.proces &&
-            <ProcesForm submit={this.addProces} proces={this.state.proces}/>}
+            <EditProcesForm submit={this.editProces} proces={this.state.proces}/>}
         </Segment>
       </div>
     );

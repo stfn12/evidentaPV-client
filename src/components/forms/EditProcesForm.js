@@ -4,7 +4,7 @@ import moment from 'moment';
 import {Form, Button, Segment, Grid } from 'semantic-ui-react';
 import InlineError from '../messages/InlineError';
 
-class ProcesForm extends React.Component{
+class EditProcesForm extends React.Component{
   state = {
     data: {
       id: this.props.proces.id,
@@ -74,7 +74,7 @@ class ProcesForm extends React.Component{
     return(
       <Segment>
       <Form onSubmit={this.onSubmit} loading={loading}>
-        <Grid fluid>
+        <Grid fluid="true">
           <Grid.Row>
             <Grid.Column>
               <Form.Field error={!!errors.serie}>
@@ -204,10 +204,9 @@ class ProcesForm extends React.Component{
   }
 }
 
-ProcesForm.propTypes ={
+EditProcesForm.propTypes ={
   submit: PropTypes.func.isRequired,
   proces: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     serie: PropTypes.string.isRequired,
     numar: PropTypes.number.isRequired,
     data_intocmire: PropTypes.string.isRequired,
@@ -220,4 +219,4 @@ ProcesForm.propTypes ={
   }).isRequired
 };
 
-export default ProcesForm;
+export default EditProcesForm;

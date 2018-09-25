@@ -49,7 +49,7 @@ class SearchProcesForm extends React.Component{
      <Form>
        <Dropdown
          search
-         fluid
+         fluid="true"
          placeholder="Cauta PV dupa contravenient"
          value = {this.state.query}
          onSearchChange={this.onSearchChange}
@@ -64,6 +64,6 @@ class SearchProcesForm extends React.Component{
 
 SearchProcesForm.propTypes = {
   onProcesSelect: PropTypes.func.isRequired
-}
+};
 
 export default SearchProcesForm;
