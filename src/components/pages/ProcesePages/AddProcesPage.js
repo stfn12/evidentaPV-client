@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import AddProcesForm from '../forms/AddProcesForm';
-import { addProces } from '../../actions/procese';
+import AddProcesForm from '../../forms/ProceseForms/AddProcesForm';
+import { addProces } from '../../../actions/procese';
 
 class AddProcesPage extends React.Component{
 

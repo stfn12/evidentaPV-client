@@ -1,7 +1,11 @@
 import {createSelector} from 'reselect';
+import { PROCES_ADDED, PROCES_EDITED } from "../types";
 
 export default function procese(state = {}, action = {}) {
   switch (action.type) {
+    case PROCES_ADDED:
+    case PROCES_EDITED:
+      return action.proces;
     default: return state;
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Button, Message} from 'semantic-ui-react';
+import {Form, Button, Message, Input} from 'semantic-ui-react';
 //import Validator from 'validator';
 import InlineError from "../messages/InlineError";
 
@@ -47,25 +47,33 @@ class LoginForm extends React.Component{
         </Message>}
         <Form.Field error={!!errors.username}>
           <label htmlFor="username">User</label>
-          <input type = "username"
-                 id="username"
-                 name="username"
-                 value={data.username}
-                 onChange={this.onChange}
+          <Input
+            size="big"
+            icon="user"
+            iconPosition="left"
+            type = "username"
+            id="username"
+            name="username"
+            value={data.username}
+            onChange={this.onChange}
           />
         </Form.Field>
         {errors.username && <InlineError text={errors.username}/>}
         <Form.Field error={!!errors.password}>
           <label htmlFor="password">Parola</label>
-          <input type = "password"
-                 id="password"
-                 name="password"
-                 value={data.password}
-                 onChange={this.onChange}
+          <Input
+            size="big"
+            icon="lock"
+            iconPosition="left"
+            type = "password"
+            id="password"
+            name="password"
+            value={data.password}
+            onChange={this.onChange}
           />
         </Form.Field>
         {errors.password && <InlineError text={errors.password}/>}
-      <Button primary>Login</Button>
+      <Button primary size="big">Login</Button>
       </Form>
     );
   }

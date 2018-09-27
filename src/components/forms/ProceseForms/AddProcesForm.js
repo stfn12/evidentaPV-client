@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Message, Button } from "semantic-ui-react";
-import InlineError from "../messages/InlineError";
+import { Form, Button } from "semantic-ui-react";
+import InlineError from "../../messages/InlineError";
 
 class AddProcesForm extends React.Component {
   state = {
@@ -11,6 +11,7 @@ class AddProcesForm extends React.Component {
       data_intocmire: '',
       marca: '',
       contravenient: '',
+      cnp: '',
       adresa: '',
       localitate: '',
       suma: '',
@@ -34,7 +35,7 @@ class AddProcesForm extends React.Component {
       this.setState({loading: true});
       this.props
         .submit(this.state.data)
-        .catch(this.setState({loading: false}));
+        .catch(err=> this.setState({errors: err.response.data.errors, loading: false}))
     }
   };
 
@@ -44,6 +45,7 @@ class AddProcesForm extends React.Component {
     if(!data.numar) errors.numar = "Campul nu poate fi gol";
     if(!data.marca) errors.marca = "Campul nu poate fi gol";
     if(!data.contravenient) errors.contravenient = "Campul nu poate fi gol";
+    if(!data.cnp) errors.cnp = "Campul nu poate fi gol";
     if(!data.localitate) errors.localitate = "Campul nu poate fi gol";
     return errors;
   };
@@ -53,9 +55,6 @@ class AddProcesForm extends React.Component {
 
     return(
       <Form onSubmit={this.onSubmit} loading={loading}>
-        {errors.global && <Message negative>
-          <Message.Header>Oops! Ceva nu e in regula</Message.Header>
-          <p>{errors.global}</p></Message>}
         <Form.Field error={!!errors.serie}>
           <label htmlFor="serie">Serie</label>
           <input type = "text"
@@ -63,10 +62,10 @@ class AddProcesForm extends React.Component {
                  name="serie"
                  placeholder="serie"
                  value={data.serie}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.serie && <InlineError text={errors.serie}/>}
         </Form.Field>
-        {errors.serie && <InlineError text={errors.serie}/>}
+
         <Form.Field error={!!errors.numar}>
           <label htmlFor="numar">Numar</label>
           <input type = "number"
@@ -74,10 +73,10 @@ class AddProcesForm extends React.Component {
                  name="numar"
                  placeholder="numar"
                  value={data.numar}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.numar && <InlineError text={errors.numar}/>}
         </Form.Field>
-        {errors.numar && <InlineError text={errors.numar}/>}
+
         <Form.Field error={!!errors.data_intocmire}>
           <label htmlFor="data_intocmire">Data intocmire</label>
           <input type = "date"
@@ -85,21 +84,21 @@ class AddProcesForm extends React.Component {
                  name="data_intocmire"
                  placeholder="data"
                  value={data.data_intocmire}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.data_intocmire && <InlineError text={errors.data_intocmire}/>}
         </Form.Field>
-        {errors.data_intocmire && <InlineError text={errors.data_intocmire}/>}
+
         <Form.Field error={!!errors.marca}>
-          <label htmlFor="marca">Marca</label>
+          <label htmlFor="marca">Marca controlor</label>
           <input type = "number"
                  id="marca"
                  name="marca"
                  placeholder="marca"
                  value={data.marca}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.marca && <InlineError text={errors.marca}/>}
         </Form.Field>
-        {errors.marca && <InlineError text={errors.marca}/>}
+
         <Form.Field error={!!errors.contravenient}>
           <label htmlFor="contravenient">Contravenient</label>
           <input type = "text"
@@ -107,10 +106,21 @@ class AddProcesForm extends React.Component {
                  name="contravenient"
                  placeholder="contravenient"
                  value={data.contravenient}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.contravenient && <InlineError text={errors.contravenient}/>}
         </Form.Field>
-        {errors.contravenient && <InlineError text={errors.contravenient}/>}
+
+        <Form.Field error={!!errors.cnp}>
+          <label htmlFor="cnp">CNP</label>
+          <input type = "number"
+                 id="cnp"
+                 name="cnp"
+                 placeholder="cnp"
+                 value={data.cnp}
+                 onChange={this.onChange}/>
+          {errors.cnp && <InlineError text={errors.cnp}/>}
+        </Form.Field>
+
         <Form.Field error={!!errors.adresa}>
           <label htmlFor="adresa">Adresa</label>
           <input type = "text"
@@ -118,10 +128,10 @@ class AddProcesForm extends React.Component {
                  name="adresa"
                  placeholder="adresa"
                  value={data.adresa}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.adresa && <InlineError text={errors.adresa}/>}
         </Form.Field>
-        {errors.adresa && <InlineError text={errors.adresa}/>}
+
         <Form.Field error={!!errors.localitate}>
           <label htmlFor="localitate">Localitate</label>
           <input type = "text"
@@ -129,10 +139,10 @@ class AddProcesForm extends React.Component {
                  name="localitate"
                  placeholder="iasi / alta localitate"
                  value={data.localitate}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.localitate && <InlineError text={errors.localitate}/>}
         </Form.Field>
-        {errors.localitate && <InlineError text={errors.localitate}/>}
+
         <Form.Field error={!!errors.suma}>
           <label htmlFor="suma">Suma</label>
           <input type = "number"
@@ -140,10 +150,10 @@ class AddProcesForm extends React.Component {
                  name="suma"
                  placeholder="suma"
                  value={data.suma}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.suma && <InlineError text={errors.suma}/>}
         </Form.Field>
-        {errors.suma && <InlineError text={errors.suma}/>}
+
         <Form.Field error={!!errors.mod_intocmire}>
           <label htmlFor="mod_intocmire">Mod intocmire</label>
           <input type = "text"
@@ -151,10 +161,10 @@ class AddProcesForm extends React.Component {
                  name="mod_intocmire"
                  placeholder="mod intocmire"
                  value={data.mod_intocmire}
-                 onChange={this.onChange}
-          />
+                 onChange={this.onChange}/>
+          {errors.mod_intocmire && <InlineError text={errors.mod_intocmire}/>}
         </Form.Field>
-        {errors.mod_intocmire && <InlineError text={errors.mod_intocmire}/>}
+
         <Button primary>Adauga</Button>
       </Form>
     );

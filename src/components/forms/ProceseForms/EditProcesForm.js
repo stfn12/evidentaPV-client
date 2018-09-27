@@ -2,17 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import {Form, Button, Segment, Grid } from 'semantic-ui-react';
-import InlineError from '../messages/InlineError';
+import InlineError from '../../messages/InlineError';
 
 class EditProcesForm extends React.Component{
   state = {
     data: {
-      id: this.props.proces.id,
+      _id: this.props.proces._id,
       serie: this.props.proces.serie,
       numar: this.props.proces.numar,
       data_intocmire: this.props.proces.data_intocmire,
       marca: this.props.proces.marca,
       contravenient: this.props.proces.contravenient,
+      cnp: this.props.proces.cnp,
       adresa: this.props.proces.adresa,
       localitate: this.props.proces.localitate,
       suma: this.props.proces.suma,
@@ -25,12 +26,13 @@ class EditProcesForm extends React.Component{
   componentWillReceiveProps(props) {
     this.setState({
       data:{
-        id: props.proces.id,
+        _id: props.proces._id,
         serie: props.proces.serie,
         numar: props.proces.numar,
         data_intocmire: props.proces.data_intocmire,
         marca: props.proces.marca,
         contravenient: props.proces.contravenient,
+        cnp: props.proces.cnp,
         adresa: props.proces.adresa,
         localitate: props.proces.localitate,
         suma: props.proces.suma,
@@ -51,6 +53,7 @@ class EditProcesForm extends React.Component{
     this.setState({errors});
     if(Object.keys(errors).length === 0){
       this.setState({loading: true});
+      console.log(this.state.data);
       this.props
         .submit(this.state.data)
         .catch(err=> this.setState({errors: err.response.data.errors, loading: false})
@@ -64,6 +67,7 @@ class EditProcesForm extends React.Component{
     if(!data.numar) errors.numar = "Campul nu poate fi gol";
     if(!data.marca) errors.marca = "Campul nu poate fi gol";
     if(!data.contravenient) errors.contravenient = "Campul nu poate fi gol";
+    if(!data.cnp) errors.cnp = "Campul nu poate fi gol";
     if(!data.localitate) errors.localitate = "Campul nu poate fi gol";
     return errors;
   };
@@ -117,7 +121,7 @@ class EditProcesForm extends React.Component{
               </Form.Field>
 
               <Form.Field error={!!errors.marca}>
-                <label htmlFor="marca">Marca</label>
+                <label htmlFor="marca">Marca controlor</label>
                 <input
                   type="number"
                   id="marca"
@@ -140,6 +144,19 @@ class EditProcesForm extends React.Component{
                   onChange={this.onChange}
                 />
                 {errors.contravenient && <InlineError text={errors.contravenient}/>}
+              </Form.Field>
+
+              <Form.Field error={!!errors.cnp}>
+                <label htmlFor="cnp">CNP</label>
+                <input
+                  type="number"
+                  id="cnp"
+                  name="cnp"
+                  placeholder="cnp"
+                  value={data.cnp}
+                  onChange={this.onChange}
+                />
+                {errors.cnp && <InlineError text={errors.cnp}/>}
               </Form.Field>
 
               <Form.Field error={!!errors.adresa}>
@@ -193,7 +210,6 @@ class EditProcesForm extends React.Component{
                 />
                 {errors.mod_intocmire && <InlineError text={errors.mod_intocmire}/>}
               </Form.Field>
-
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -207,11 +223,13 @@ class EditProcesForm extends React.Component{
 EditProcesForm.propTypes ={
   submit: PropTypes.func.isRequired,
   proces: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     serie: PropTypes.string.isRequired,
     numar: PropTypes.number.isRequired,
     data_intocmire: PropTypes.string.isRequired,
     marca: PropTypes.number.isRequired,
     contravenient: PropTypes.string.isRequired,
+    cnp: PropTypes.number.isRequired,
     adresa: PropTypes.string.isRequired,
     localitate: PropTypes.string.isRequired,
     suma: PropTypes.number.isRequired,

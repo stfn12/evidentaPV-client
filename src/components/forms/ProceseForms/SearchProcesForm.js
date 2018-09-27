@@ -33,10 +33,10 @@ class SearchProcesForm extends React.Component{
         const options = [];
         const proceseHash = {};
         procese.forEach(proces => {
-          proceseHash[proces.id] = proces;
+          proceseHash[proces._id] = proces;
           options.push({
-            key: proces.id,
-            value: proces.id,
+            key: proces._id,
+            value: proces._id,
             text: proces.contravenient
           })
         });
@@ -49,7 +49,7 @@ class SearchProcesForm extends React.Component{
      <Form>
        <Dropdown
          search
-         fluid="true"
+         fluid
          placeholder="Cauta PV dupa contravenient"
          value = {this.state.query}
          onSearchChange={this.onSearchChange}
