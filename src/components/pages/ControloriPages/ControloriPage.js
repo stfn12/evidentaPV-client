@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {edit} from '../../../actions/controlori';
-import AddControlorCtA from "../../ctas/ControloriCtas/AddControlorCtA";
-import EditControlorCtA from "../../ctas/ControloriCtas/EditControlorCtA";
+import ControlorCtA from "../../ctas/ControlorCtA";
+import ListControloriForm from "../../forms/ControloriForms/ListControloriForm";
 
 class ControloriPage extends React.Component{
   state = {
@@ -14,16 +13,15 @@ class ControloriPage extends React.Component{
     return(
       <div>
         <h1 align="center">Controlori</h1>
-        <AddControlorCtA />
-        <EditControlorCtA />
+        <ControlorCtA />
+        <ListControloriForm/>
       </div>
     );
   }
 }
 
 ControloriPage.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired,
-  edit: PropTypes.func.isRequired
+  isAuthenticated: PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state) {
@@ -32,4 +30,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {edit})(ControloriPage);
+export default connect(mapStateToProps)(ControloriPage);

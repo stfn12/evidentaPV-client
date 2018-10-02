@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actions  from '../../actions/auth';
+import Redirect from "react-router-dom/es/Redirect";
 
 const HomePage = ({ isAuthenticated, logout }) => (
   <div>
     <h1 align="center">Evidenta PV controlori</h1>
     { isAuthenticated ?
-      <button onClick={() => logout()}>Logout</button> : <Link to="/login">Login</Link>}
+      <Redirect to="/procese"/>: <Redirect to="/login"/>}
   </div>
 );
 

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {allProceseSelector} from '../../../reducers/procese';
-import AddProcesCtA from '../../ctas/ProceseCtas/AddProcesCtA';
+import ProcesCtA from '../../ctas/ProcesCtA';
 import {edit} from '../../../actions/procese';
-import EditProcesCtA from "../../ctas/ProceseCtas/EditProcesCtA";
+import ListProceseForm from "../../forms/ProceseForms/ListProceseForm";
 
 class ProcesePage extends React.Component{
   state = {
@@ -15,8 +15,8 @@ class ProcesePage extends React.Component{
     return(
       <div>
         <h1 align="center">Procese verbale</h1>
-        <AddProcesCtA />
-        <EditProcesCtA />
+        <ProcesCtA />
+        <ListProceseForm/>
       </div>
     );
   }

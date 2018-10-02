@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import {Form, Button, Segment, Grid } from 'semantic-ui-react';
 import InlineError from '../../messages/InlineError';
 
@@ -102,8 +101,8 @@ EditControlorForm.propTypes ={
   submit: PropTypes.func.isRequired,
   controlor: PropTypes.shape({
     _id: PropTypes.string.isRequired,
-    marca: PropTypes.string.isRequired,
-    nume: PropTypes.number.isRequired
+    marca: PropTypes.number.isRequired,
+    nume: PropTypes.string.isRequired
   }).isRequired
 };
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {edit} from '../../../actions/chitante';
-import AddChitantaCtA from "../../ctas/ChitanteCtas/AddChitantaCtA";
-import EditChitantaCtA from "../../ctas/ChitanteCtas/EditChitantaCtA";
+import ChitantaCtA from "../../ctas/ChitantaCtA";
+import ListChitanteForm from "../../forms/ChitanteForms/ListChitanteForm";
 
 class ChitantePage extends React.Component{
   state = {
@@ -14,16 +13,15 @@ class ChitantePage extends React.Component{
     return(
       <div>
         <h1 align="center">Chitante</h1>
-        <AddChitantaCtA />
-        <EditChitantaCtA />
+        <ChitantaCtA />
+        <ListChitanteForm/>
       </div>
     );
   }
 }
 
 ChitantePage.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired,
-  edit: PropTypes.func.isRequired
+  isAuthenticated: PropTypes.bool.isRequired
 };
 
 function mapStateToProps(state) {
@@ -32,4 +30,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, {edit})(ChitantePage);
+export default connect(mapStateToProps)(ChitantePage);

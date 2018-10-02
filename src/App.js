@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import { Route } from "react-router-dom";
+import { Route} from "react-router-dom";
 import PropTypes from 'prop-types';
 import HomePage from "./components/pages/HomePage";
 import LoginPage from "./components/pages/LoginPage";
