@@ -29,38 +29,35 @@ class ListControloriForm extends React.Component{
     })
   };
 
-
   componentDidMount(){
     this.setState({loading: true});
     axios.get(`/api/controlori/search`)
       .then(res => this.setState({loading: false, controlori: res.data.controlori}))
+
   };
 
   render(){
-    const {column, direction, controlori } = this.state;
+    let { controlori } = this.state;
+
     return(
-    <Table celled sortable fixed>
-      <Table.Header>
-        <Table.Row>
-          <Table.HeaderCell
-            sorted={column === 'marca' ? direction : null}
-            onClick={this.handleSort('marca')}>Marca</Table.HeaderCell>
-          <Table.HeaderCell
-            sorted={column === 'nume' ? direction : null}
-            onClick={this.handleSort('nume')}>
-            Nume
-          </Table.HeaderCell>
-        </Table.Row>
-      </Table.Header>
-      <Table.Body>
-        {_.map(controlori, ({_id, marca, nume }) => (
-          <Table.Row key={_id}>
-            <Table.Cell selectable> <a href="/controlori/edit" >{marca} </a> </Table.Cell>
-            <Table.Cell selectable> <a href="/controlori/edit" >{nume} </a> </Table.Cell>
-          </Table.Row>
-        ))}
-      </Table.Body>
-    </Table>
+      <div>
+        <Table celled sortable fixed>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>Marca</Table.HeaderCell>
+              <Table.HeaderCell>Nume</Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
+          <Table.Body>
+            {_.map(controlori, ({_id, marca, nume }) => (
+              <Table.Row key={_id}>
+                <Table.Cell selectable> <a href="/controlori/edit" >{marca} </a></Table.Cell>
+                <Table.Cell selectable> <a href="/controlori/edit" >{nume} </a> </Table.Cell>
+              </Table.Row>
+            ))}
+            </Table.Body>
+        </Table>
+      </div>
     )
   }
 }

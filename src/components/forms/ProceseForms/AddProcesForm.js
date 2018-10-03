@@ -18,7 +18,8 @@ class AddProcesForm extends React.Component {
       mod_intocmire: ''
     },
     loading: false,
-    errors: {}
+    errors: {},
+    ctl: {}
   };
 
   onChange = e =>
@@ -133,7 +134,7 @@ class AddProcesForm extends React.Component {
         </Form.Field>
 
         <Form.Field error={!!errors.localitate}>
-          <label htmlFor="localitate">Localitate</label>
+          <label htmlFor="localitate">Mod solutionare</label>
           <input type = "text"
                  id="localitate"
                  name="localitate"

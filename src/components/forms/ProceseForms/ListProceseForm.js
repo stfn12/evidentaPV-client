@@ -81,7 +81,7 @@ class ListProceseForm extends React.Component{
             <Table.HeaderCell
               sorted={column === 'localitate' ? direction : null}
               onClick={this.handleSort('localitate')}>
-              Localitate
+              Mod solutionare
             </Table.HeaderCell>
             <Table.HeaderCell
               sorted={column === 'suma' ? direction : null}

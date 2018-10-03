@@ -12,8 +12,8 @@ class LoginPage extends React.Component{
   render(){
     return(
       <div>
-        <h1>Login</h1>
-
+        <h1 align="center">Evidenta procese verbale controlori</h1>
+        <h2>Login</h2>
         <LoginForm submit={this.submit}/>
       </div>
     );

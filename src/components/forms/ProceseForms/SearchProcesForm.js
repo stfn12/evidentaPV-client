@@ -37,7 +37,7 @@ class SearchProcesForm extends React.Component{
           options.push({
             key: proces._id,
             value: proces._id,
-            text: proces.contravenient
+            text: `${proces.serie} ${proces.numar}`
           })
         });
         this.setState({loading: false, options, procese: proceseHash})
@@ -50,7 +50,7 @@ class SearchProcesForm extends React.Component{
        <Dropdown
          search
          fluid
-         placeholder="Cauta PV dupa contravenient"
+         placeholder="Cauta PV dupa serie si numar. Ex: A 123"
          value = {this.state.query}
          onSearchChange={this.onSearchChange}
          options={this.state.options}

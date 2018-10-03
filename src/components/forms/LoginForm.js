@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Button, Message, Input} from 'semantic-ui-react';
+import {Form, Button, Message, Input, Grid} from 'semantic-ui-react';
 //import Validator from 'validator';
 import InlineError from "../messages/InlineError";
 
@@ -40,6 +40,7 @@ class LoginForm extends React.Component{
   render(){
     const { data, errors, loading } = this.state;
     return(
+      <Grid>
       <Form onSubmit={this.onSubmit} loading={loading}>
         {errors.global && <Message negative>
           <Message.Header>Oops! Ceva nu e in regula</Message.Header>
@@ -75,6 +76,7 @@ class LoginForm extends React.Component{
         {errors.password && <InlineError text={errors.password}/>}
       <Button primary size="big">Login</Button>
       </Form>
+      </Grid>
     );
   }
 }

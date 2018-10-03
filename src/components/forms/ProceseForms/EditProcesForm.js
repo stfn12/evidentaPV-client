@@ -173,7 +173,7 @@ class EditProcesForm extends React.Component{
               </Form.Field>
 
               <Form.Field error={!!errors.localitate}>
-                <label htmlFor="localitate">Localitate</label>
+                <label htmlFor="localitate">Mod solutionare</label>
                 <input
                   type="text"
                   id="localitate"
