@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import LoginForm from '../forms/LoginForm';
 import { login } from '../../actions/auth';
+import { Divider } from 'semantic-ui-react';
 
 class LoginPage extends React.Component{
 
@@ -13,7 +14,9 @@ class LoginPage extends React.Component{
     return(
       <div>
         <h1 align="center">Evidenta procese verbale controlori</h1>
+        <Divider/>
         <h2>Login</h2>
+        <Divider/>
         <LoginForm submit={this.submit}/>
       </div>
     );

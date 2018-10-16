@@ -10,6 +10,7 @@
     "moment": "^2.22.2",
     "prop-types": "latest",
     "react": "^16.5.1",
+    "react-date-range": "^0.9.4",
     "react-dom": "^16.5.1",
     "react-js-pagination": "^3.0.2",
     "react-pagination-table": "^2.0.2",

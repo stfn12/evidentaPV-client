@@ -37,7 +37,7 @@ class SearchChitantaForm extends React.Component{
           options.push({
             key: chitanta._id,
             value: chitanta._id,
-            text: chitanta.contravenient
+            text: `${chitanta.numar} ${chitanta.contravenient}`
           })
         });
         this.setState({loading: false, options, chitante: chitanteHash})
@@ -50,7 +50,7 @@ class SearchChitantaForm extends React.Component{
         <Dropdown
           search
           fluid
-          placeholder="Cauta chitanta dupa contravenient"
+          placeholder="Cauta chitanta dupa contravenient/numar. Ex: 222 Vasile"
           value = {this.state.query}
           onSearchChange={this.onSearchChange}
           options={this.state.options}

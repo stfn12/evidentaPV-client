@@ -3,13 +3,16 @@ import _ from 'lodash';
 import {Table} from 'semantic-ui-react';
 import axios from "axios";
 import moment from "moment";
+import {Link} from 'react-router-dom'
 
 class ListProceseForm extends React.Component{
   state = {
-    loading: false,
+    loading: true,
     procese: {},
     column: null,
-    direction: null
+    direction: null,
+    startDate: null,  
+    endDate: null
   };
 
   handleSort = clickedColumn => () => {
@@ -30,16 +33,16 @@ class ListProceseForm extends React.Component{
     })
   };
 
-
-  componentDidMount(){
-    this.setState({loading: true});
-    axios.get(`/api/procese/search`)
+  loadProcese(){
+    axios.get(`/api/procese/searchDate?from=${this.props.startDate}&to=${this.props.endDate}`)
       .then(res => this.setState({loading: false, procese: res.data.procese}))
   };
 
   render(){
     const {column, direction, procese } = this.state;
+    this.loadProcese();
     return(
+      <div>
       <Table selectable collapsing celled sortable fixed>
         <Table.Header>
           <Table.Row>
@@ -53,65 +56,34 @@ class ListProceseForm extends React.Component{
               onClick={this.handleSort('numar')}>
               Numar
             </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'data' ? direction : null}
-              onClick={this.handleSort('data')}>
-              Data intocmire
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'marca' ? direction : null}
-              onClick={this.handleSort('marca')}>
-              Marca
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'contravenient' ? direction : null}
-              onClick={this.handleSort('contravenient')}>
-              Contravenient
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'cnp' ? direction : null}
-              onClick={this.handleSort('cnp')}>
-              CNP
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'adresa' ? direction : null}
-              onClick={this.handleSort('adresa')}>
-              Adresa
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'localitate' ? direction : null}
-              onClick={this.handleSort('localitate')}>
-              Mod solutionare
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'suma' ? direction : null}
-              onClick={this.handleSort('suma')}>
-              Suma
-            </Table.HeaderCell>
-            <Table.HeaderCell
-              sorted={column === 'mod' ? direction : null}
-              onClick={this.handleSort('mod')}>
-              Mod intocmire
-            </Table.HeaderCell>
+            <Table.HeaderCell>Data intocmire</Table.HeaderCell>
+            <Table.HeaderCell>Marca</Table.HeaderCell>
+            <Table.HeaderCell>Contravenient</Table.HeaderCell>
+            <Table.HeaderCell>CNP</Table.HeaderCell>
+            <Table.HeaderCell>Adresa</Table.HeaderCell>
+            <Table.HeaderCell>Mod solutionare</Table.HeaderCell>
+            <Table.HeaderCell>Suma</Table.HeaderCell>
+            <Table.HeaderCell>Mod intocmire</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
           {_.map(procese, ({_id, serie, numar, data_intocmire, marca, contravenient, cnp, adresa, localitate, suma, mod_intocmire }) => (
             <Table.Row key={_id}>
-              <Table.Cell selectable> <a href="/procese/edit" >{serie} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{numar} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{moment(data_intocmire).format('DD-MM-YYYY')} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{marca} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{contravenient} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{cnp} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{adresa} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{localitate} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{suma} </a> </Table.Cell>
-              <Table.Cell selectable> <a href="/procese/edit" >{mod_intocmire} </a> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{serie} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{numar} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{moment(data_intocmire).format('DD-MM-YYYY')} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{marca} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{contravenient} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{cnp} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{adresa} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{localitate} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{suma} </Link> </Table.Cell>
+              <Table.Cell selectable> <Link to="/procese/edit" >{mod_intocmire} </Link> </Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
       </Table>
+      </div>
     )
   }
 }

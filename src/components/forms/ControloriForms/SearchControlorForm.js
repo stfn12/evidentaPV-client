@@ -37,7 +37,7 @@ class SearchControlorForm extends React.Component{
           options.push({
             key: controlor._id,
             value: controlor._id,
-            text: controlor.nume
+            text: `${controlor.marca} ${controlor.nume}`
           })
         });
         this.setState({loading: false, options, controlori: controloriHash})
@@ -50,7 +50,7 @@ class SearchControlorForm extends React.Component{
         <Dropdown
           search
           fluid
-          placeholder="Cauta controlor dupa nume"
+          placeholder="Cauta controlor dupa marca/nume. Ex: 1 Vasile"
           value = {this.state.query}
           onSearchChange={this.onSearchChange}
           options={this.state.options}

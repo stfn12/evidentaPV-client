@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Form, Dropdown } from 'semantic-ui-react';
+//import moment from 'moment';
 
 class SearchProcesForm extends React.Component{
   state = {
@@ -37,7 +38,7 @@ class SearchProcesForm extends React.Component{
           options.push({
             key: proces._id,
             value: proces._id,
-            text: `${proces.serie} ${proces.numar}`
+            text: `${proces.serie} ${proces.numar} ${proces.contravenient}` /* ${moment(proces.data_intocmire).format('YYYY-MM-DD')} */
           })
         });
         this.setState({loading: false, options, procese: proceseHash})
@@ -50,7 +51,7 @@ class SearchProcesForm extends React.Component{
        <Dropdown
          search
          fluid
-         placeholder="Cauta PV dupa serie si numar. Ex: A 123"
+         placeholder="Cauta PV dupa serie/numar/contravenient. Ex: A 123"
          value = {this.state.query}
          onSearchChange={this.onSearchChange}
          options={this.state.options}
