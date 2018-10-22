@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import {Form, Button, Segment, Grid } from 'semantic-ui-react';
+import { Form, Button, Segment, Grid, Icon } from "semantic-ui-react";
 import InlineError from '../../messages/InlineError';
 
 class EditProcesForm extends React.Component{
@@ -212,7 +212,8 @@ class EditProcesForm extends React.Component{
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Button primary>Salveaza</Button>
+        <Button primary icon labelPosition='right'>
+          <Icon name='checkmark'/>Salveaza</Button>
       </Form>
       </Segment>
     )

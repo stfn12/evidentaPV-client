@@ -10,15 +10,15 @@ const ChitantaCtA = () => (
         <Card.Content>
           <Link to="/chitante/new">
             Adauga chitanta
-            <Icon name="plus circle" size="massive"/>
+            <Icon name="plus square outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>
       <Card centered>
         <Card.Content>
           <Link to="/chitante/edit">
-            Cauta chitanta
-            <Icon name="search" size="massive"/>
+            Editeaza chitanta
+            <Icon name="edit outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>

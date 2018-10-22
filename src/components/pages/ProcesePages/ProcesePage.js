@@ -13,33 +13,8 @@ class ProcesePage extends React.Component{
   state = {
     proces: null,
     loading: false,
-    errors: {},
     startDate: null,
     endDate: null
-  };
-
-  onChange = e =>
-    this.setState({
-      data: { ...this.state.data, [e.target.name]: e.target.value}
-    });
-
-  onSubmit = e => {
-    e.preventDefault();
-    const errors = this.validate(this.state.data);
-    this.setState({errors});
-    if(Object.keys(errors).length === 0){
-      this.setState({loading: true});
-      this.props
-        .submit(this.state.data)
-        .catch(err=> this.setState({errors: err.response.data.errors, loading: false}))
-    }
-  };
-
-  validate = data => {
-    const errors = {};
-    if(!data.startDate) errors.startDate = "Introduceti data";
-    if(!data.endDate) errors.endDate = "Introduceti data";
-    return errors;
   };
 
   handleSelect = range => {

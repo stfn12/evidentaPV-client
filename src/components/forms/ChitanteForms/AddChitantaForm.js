@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button, Icon } from "semantic-ui-react";
 import InlineError from "../../messages/InlineError";
 
 class AddChitantaForm extends React.Component {
@@ -25,7 +25,6 @@ class AddChitantaForm extends React.Component {
     e.preventDefault();
     const errors = this.validate(this.state.data);
     this.setState({errors});
-    console.log({errors});
     if(Object.keys(errors).length === 0){
       this.setState({loading: true});
       this.props
@@ -103,7 +102,7 @@ class AddChitantaForm extends React.Component {
           {errors.suma && <InlineError text={errors.suma}/>}
         </Form.Field>
 
-        <Button primary>Adauga</Button>
+        <Button icon labelPosition='right' primary><Icon name='plus square outline' size='big'/>Adauga</Button>
       </Form>
     );
   }

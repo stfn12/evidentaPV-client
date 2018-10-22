@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Form, Button, Segment, Grid } from 'semantic-ui-react';
+import {Form, Button, Segment, Grid, Icon } from 'semantic-ui-react';
 import InlineError from '../../messages/InlineError';
 
 class EditControlorForm extends React.Component{
@@ -90,8 +90,8 @@ class EditControlorForm extends React.Component{
               </Grid.Column>
             </Grid.Row>
           </Grid>
-          <Button primary>Salveaza</Button>
-        </Form>
+          <Button primary icon labelPosition='right'><Icon name='checkmark'/>Salveaza</Button>
+       </Form>
       </Segment>
     )
   }

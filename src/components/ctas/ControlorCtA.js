@@ -10,15 +10,23 @@ const ControlorCtA = () => (
         <Card.Content>
           <Link to="/controlori/new">
             Adauga controlor
-            <Icon name="plus circle" size="massive"/>
+            <Icon name="plus square outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>
       <Card centered>
         <Card.Content>
           <Link to="/controlori/edit">
-            Cauta controlor
-            <Icon name="search" size="massive"/>
+            Editeaza controlor
+            <Icon name="edit outline" size="massive"/>
+          </Link>
+        </Card.Content>
+      </Card>
+      <Card centered>
+        <Card.Content>
+          <Link to="/controlori/reports">
+            Rapoarte controlori
+            <Icon name="list alternate outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>

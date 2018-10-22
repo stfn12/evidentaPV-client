@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form, Button } from "semantic-ui-react";
+import { Form, Button, Icon } from "semantic-ui-react";
 import InlineError from "../../messages/InlineError";
 
 class AddControlorForm extends React.Component {
@@ -22,7 +22,6 @@ class AddControlorForm extends React.Component {
     e.preventDefault();
     const errors = this.validate(this.state.data);
     this.setState({errors});
-    console.log({errors});
     if(Object.keys(errors).length === 0){
       this.setState({loading: true});
       this.props
@@ -66,7 +65,7 @@ class AddControlorForm extends React.Component {
           {errors.nume && <InlineError text={errors.nume}/>}
         </Form.Field>
 
-        <Button primary>Adauga</Button>
+        <Button icon labelPosition='right' primary><Icon name='plus square outline' size='big'/>Adauga</Button>
       </Form>
     );
   }

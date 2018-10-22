@@ -57,24 +57,24 @@
     <session id="-2065134056">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.17" value="3" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.22" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="eslintrc" value="2" />
           <entry key="html" value="1" />
-          <entry key="js" value="432" />
+          <entry key="js" value="479" />
           <entry key="json" value="3" />
         </counts>
       </usages-collector>
@@ -82,40 +82,28 @@
         <counts>
           <entry key="HTML" value="1" />
           <entry key="JSON" value="5" />
-          <entry key="JavaScript" value="432" />
+          <entry key="JavaScript" value="479" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="20358" />
+          <entry key="js" value="21551" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="20358" />
+          <entry key="JavaScript" value="21551" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/pages/ProcesePages/ProcesePage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/ListProceseForm.js">
+        <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/ListChitanteForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1357">
-              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="253">
+              <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -141,12 +129,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/pages/EditProcesPage.js" />
         <option value="$PROJECT_DIR$/src/components/forms/EditProcesForm.js" />
         <option value="$PROJECT_DIR$/src/reducers/procese.js" />
         <option value="$PROJECT_DIR$/src/components/forms/AddProcesForm.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/EditProcesCtA.js" />
-        <option value="$PROJECT_DIR$/src/components/navigation/TopNavigation.js" />
         <option value="$PROJECT_DIR$/src/components/forms/SearchProcesForm.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/AddChitantaCtA.js" />
         <option value="$PROJECT_DIR$/src/components/forms/AddChitantaForm.js" />
@@ -157,19 +143,13 @@
         <option value="$PROJECT_DIR$/src/components/ctas/EditChitantaCtA.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ChitantePage.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ChitantePages/AddChitantaPage.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ChitanteForms/AddChitantaForm.js" />
         <option value="$PROJECT_DIR$/src/actions/chitante.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ChitantePages/EditChitantaPage.js" />
-        <option value="$PROJECT_DIR$/src/actions/controlori.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/AddControlorForm.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ControloriPages/AddControlorPage.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/ControloriPages/EditControlorPage.js" />
         <option value="$PROJECT_DIR$/src/reducers/controlori.js" />
         <option value="$PROJECT_DIR$/src/rootReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/EditControlorForm.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/pages/HomePage.js" />
-        <option value="$PROJECT_DIR$/src/api.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/ControloriCtas/EditControlorCtA.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/ControloriCtas/AddControlorCtA.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/ChitanteCtas/AddChitantaCtA.js" />
@@ -178,20 +158,28 @@
         <option value="$PROJECT_DIR$/src/components/forms/ChitanteForms/ListChitanteForm.js" />
         <option value="$PROJECT_DIR$/src/components/forms/LoginForm.js" />
         <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/ListControloriForm.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/AddProcesForm.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/EditProcesForm.js" />
         <option value="$PROJECT_DIR$/src/components/pages/LoginPage.js" />
         <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/SearchControlorForm.js" />
         <option value="$PROJECT_DIR$/src/components/forms/ChitanteForms/SearchChitantaForm.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ChitantePages/ChitantePage.js" />
         <option value="$PROJECT_DIR$/src/components/pages/ControloriPages/ControloriPage.js" />
-        <option value="$PROJECT_DIR$/src/components/ctas/ControlorCtA.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/SearchProcesForm.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/ProcesePages/ProcesePage.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ChitanteForms/EditChitantaForm.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/EditProcesForm.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/ChitantaCtA.js" />
         <option value="$PROJECT_DIR$/src/components/ctas/ProcesCtA.js" />
-        <option value="$PROJECT_DIR$/src/types.js" />
-        <option value="$PROJECT_DIR$/src/components/pages/ProcesePages/ProcesePage.js" />
-        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/SearchProcesForm.js" />
+        <option value="$PROJECT_DIR$/src/components/ctas/ControlorCtA.js" />
+        <option value="$PROJECT_DIR$/src/components/navigation/TopNavigation.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/AddControlorForm.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ChitanteForms/AddChitantaForm.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/AddProcesForm.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/ControloriPages/EditControlorPage.js" />
+        <option value="$PROJECT_DIR$/src/actions/controlori.js" />
         <option value="$PROJECT_DIR$/src/components/forms/ProceseForms/ListProceseForm.js" />
+        <option value="$PROJECT_DIR$/src/api.js" />
+        <option value="$PROJECT_DIR$/src/types.js" />
+        <option value="$PROJECT_DIR$/src/components/forms/ControloriForms/EditControlorForm.js" />
       </list>
     </option>
   </component>
@@ -237,6 +225,12 @@
               <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
               <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -245,6 +239,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="forms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="ChitanteForms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="forms" type="462c0819:PsiDirectoryNode" />
+              <item name="ControloriForms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
@@ -259,7 +269,7 @@
               <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="navigation" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
@@ -267,7 +277,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="ChitantePages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
@@ -282,21 +291,7 @@
               <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="ProcesePages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="evidentaPV-client" type="b2602c69:ProjectViewProjectNode" />
-              <item name="evidentaPV-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,7 +301,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../evidentaPV-api2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -395,12 +390,15 @@
       <workItem from="1538638686836" duration="4939000" />
       <workItem from="1538722576496" duration="8538000" />
       <workItem from="1538986767422" duration="2972000" />
-      <workItem from="1539667833340" duration="10470000" />
+      <workItem from="1539667833340" duration="12564000" />
+      <workItem from="1539754464055" duration="5341000" />
+      <workItem from="1539926470627" duration="4879000" />
+      <workItem from="1540185722840" duration="11270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165500000" />
+    <option name="totallyTimeSpent" value="189084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -412,7 +410,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.3308026" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.3308026" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -449,31 +447,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ctas/ChitanteCtas/EditChitantaCtA.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/AddChitantaForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="3" column="25" selection-end-line="115" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/controlori.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/ControloriPages/AddControlorPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/controlori.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -489,20 +466,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/ControloriPages/EditControlorPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/EditChitantaForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="115" column="31" lean-forward="true" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ctas/ControloriCtas/EditControlorCtA.js" />
     <entry file="file://$PROJECT_DIR$/src/components/routes/GuestRoute.js">
@@ -526,24 +489,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/ListChitanteForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1403">
-          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/chitante.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/AddProcesForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="75" column="35" lean-forward="true" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -554,73 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/ProcesePages/EditProcesPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/ChitantePages/ChitantePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/ControloriPages/ControloriPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ctas/ControlorCtA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ctas/ChitantaCtA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ctas/ProcesCtA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/ListControloriForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/EditProcesForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="115" column="73" selection-start-line="115" selection-start-column="25" selection-end-line="115" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/EditControlorForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/AddControlorForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -631,20 +517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -652,13 +524,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="77" lean-forward="true" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -687,16 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/navigation/TopNavigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -711,20 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/procese.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -751,8 +592,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/SearchProcesForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="276">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/procese.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/EditProcesForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="215" column="51" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/EditChitantaForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="141" column="15" lean-forward="true" selection-start-line="141" selection-start-column="15" selection-end-line="141" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ctas/ChitantaCtA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ctas/ProcesCtA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ctas/ControlorCtA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/AddChitantaForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="26" column="28" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/navigation/TopNavigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/controlori.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rootReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/AddProcesForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="35" column="16" lean-forward="true" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -761,18 +692,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/ProcesePages/ProcesePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        <state relative-caret-position="413">
+          <caret line="57" column="45" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/AddControlorForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/ProcesePages/EditProcesPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/ControloriPages/ControloriPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/ListControloriForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="57" column="25" lean-forward="true" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/forms/ProceseForms/ListProceseForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1357">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+        <state relative-caret-position="183">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/ControloriPages/EditControlorPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="77" lean-forward="true" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/controlori.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ControloriForms/EditControlorForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/forms/ChitanteForms/ListChitanteForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
         </state>
       </provider>
     </entry>

@@ -10,15 +10,15 @@ const ProcesCtA = () => (
         <Card.Content>
           <Link to="/procese/new">
             Adauga PV
-            <Icon name="plus circle" size="massive"/>
+            <Icon name="plus square outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>
       <Card centered>
         <Card.Content>
           <Link to="/procese/edit">
-            Cauta PV
-            <Icon name="search" size="massive"/>
+            Editeaza PV
+            <Icon name="edit outline" size="massive"/>
           </Link>
         </Card.Content>
       </Card>
