@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {Table} from 'semantic-ui-react';
 import axios from "axios";
 import moment from "moment";
-import {Link} from 'react-router-dom';
+import ReactTable from "react-table";
 
 class ListProceseForm extends React.Component{
   state = {
@@ -17,6 +17,7 @@ class ListProceseForm extends React.Component{
   };
 
   loadProcese(){
+    //this.setState({loading: true});
     if(this.props.startDate === null || this.props.endDate === null)
       return;
     axios.get(`/api/procese/searchDate?from=${this.props.startDate}&to=${this.props.endDate}`)
@@ -24,42 +25,54 @@ class ListProceseForm extends React.Component{
   };
 
   render(){
-    const { procese, loading, selected } = this.state;
+    const { procese, loading} = this.state;
     this.loadProcese();
+    const columns = [{
+      Header: 'Serie',
+      accessor: 'serie'
+    }, {
+      Header: 'Numar',
+      accessor: 'numar'
+    }, {
+      Header: 'Data',
+      accessor: 'data_intocmire'
+    }, {
+      Header: 'Marca',
+      accessor: 'marca'
+    }, {
+      Header: 'Contravenient',
+      accessor: 'contravenient'
+    },{
+      Header: 'CNP',
+      accessor: 'cnp'
+    }, {
+      Header: 'Adresa',
+      accessor: 'adresa'
+    }, {
+      Header: 'Localitate',
+      accessor: 'localitate'
+    }, {
+      Header: 'Suma',
+      accessor: 'suma'
+    }, {
+      Header: 'Mod intocmire',
+      accessor: 'mod_intocmire'
+    }];
+    if(loading){
+      return(<div></div>)
+    }
     return(
-      <div>
-      <Table size={'small'} selectable fixed loading={loading}>
-        <Table.Header>
-          <Table.Row>
-            <Table.HeaderCell width={'one'}>Serie</Table.HeaderCell>
-            <Table.HeaderCell width={'one'}>Numar</Table.HeaderCell>
-            <Table.HeaderCell>Data intocmire</Table.HeaderCell>
-            <Table.HeaderCell width={'one'}>Marca</Table.HeaderCell>
-            <Table.HeaderCell>Contravenient</Table.HeaderCell>
-            <Table.HeaderCell width={'two'}>CNP</Table.HeaderCell>
-            <Table.HeaderCell>Adresa</Table.HeaderCell>
-            <Table.HeaderCell>Mod solutionare</Table.HeaderCell>
-            <Table.HeaderCell width={'one'}>Suma</Table.HeaderCell>
-            <Table.HeaderCell>Mod intocmire</Table.HeaderCell>
-          </Table.Row>
-        </Table.Header>
-        <Table.Body>
-          {_.map(procese, ({_id, serie, numar, data_intocmire, marca, contravenient, cnp, adresa, localitate, suma, mod_intocmire }) => (
-            <Table.Row selectable key={_id}>
-              <Table.Cell> {serie}  </Table.Cell>
-              <Table.Cell> {numar}  </Table.Cell>
-              <Table.Cell> {moment(data_intocmire).format('DD-MM-YYYY')}  </Table.Cell>
-              <Table.Cell> {marca}  </Table.Cell>
-              <Table.Cell> {contravenient}  </Table.Cell>
-              <Table.Cell> {cnp}  </Table.Cell>
-              <Table.Cell> {adresa}  </Table.Cell>
-              <Table.Cell> {localitate}  </Table.Cell>
-              <Table.Cell> {suma}  </Table.Cell>
-              <Table.Cell> {mod_intocmire}  </Table.Cell>
-            </Table.Row>
-          ))}
-        </Table.Body>
-      </Table>
+      <div style={{textAlign:"center"}}>
+        <ReactTable
+          data={procese}
+          columns={columns}
+          defaultPageSize={10}
+          previousText="Inapoi"
+          nextText="Inainte"
+          pageText= 'Pagina'
+          ofText= 'din'
+          rowsText= 'randuri'
+        />
       </div>
     )
   }
