@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {allProceseSelector} from '../../../reducers/procese';
+import { allProceseSelector } from "../../../reducers/procese";
 import SearchProcesForm from '../../forms/ProceseForms/SearchProcesForm';
 import EditProcesForm from '../../forms/ProceseForms/EditProcesForm';
 import {Segment} from 'semantic-ui-react';

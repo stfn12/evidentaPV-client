@@ -1,6 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
-import {Table} from 'semantic-ui-react';
 import axios from "axios";
 import moment from "moment";
 import ReactTable from "react-table";
@@ -34,9 +32,11 @@ class ListChitanteForm extends React.Component{
         Header: 'Numar',
         accessor: 'numar'
       }, {
-        Header: 'Data',
-        accessor: 'data'
-      }, {
+      id:"data",
+      Header: 'Data',
+      accessor: data=>{
+        return moment(data.data).format("DD/MM/YYYY")}
+        }, {
         Header: 'Suma',
         accessor: 'suma'
       }];

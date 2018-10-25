@@ -1,6 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
-import {Table} from 'semantic-ui-react';
 import axios from "axios";
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'

@@ -1,9 +1,8 @@
 import React from 'react';
-import _ from 'lodash';
-import {Table} from 'semantic-ui-react';
 import axios from "axios";
 import moment from "moment";
 import ReactTable from "react-table";
+import { connect } from 'react-redux';
 
 class ListProceseForm extends React.Component{
   state = {
@@ -25,38 +24,52 @@ class ListProceseForm extends React.Component{
   };
 
   render(){
-    const { procese, loading} = this.state;
+    const { procese, loading } = this.state;
     this.loadProcese();
     const columns = [{
       Header: 'Serie',
-      accessor: 'serie'
+      accessor: 'serie',
+      maxWidth: 45
     }, {
       Header: 'Numar',
-      accessor: 'numar'
+      accessor: 'numar',
+      maxWidth: 80
     }, {
+      id:"data_intocmire",
       Header: 'Data',
-      accessor: 'data_intocmire'
+      accessor: data=>{
+        return moment(data.data_intocmire).format("DD/MM/YYYY")
+      },
+      maxWidth: 90
     }, {
       Header: 'Marca',
-      accessor: 'marca'
+      accessor: 'marca',
+      maxWidth: 55
     }, {
       Header: 'Contravenient',
-      accessor: 'contravenient'
+      accessor: 'contravenient',
+      minWidth: 150,
+      maxWidth: 200
     },{
       Header: 'CNP',
-      accessor: 'cnp'
+      accessor: 'cnp',
+      minWidth: 120,
+      maxWidth: 140
     }, {
       Header: 'Adresa',
       accessor: 'adresa'
     }, {
       Header: 'Localitate',
-      accessor: 'localitate'
+      accessor: 'localitate',
+      maxWidth: 90
     }, {
       Header: 'Suma',
-      accessor: 'suma'
+      accessor: 'suma',
+      maxWidth: 60
     }, {
       Header: 'Mod intocmire',
-      accessor: 'mod_intocmire'
+      accessor: 'mod_intocmire',
+      maxWidth: 80
     }];
     if(loading){
       return(<div></div>)
@@ -72,10 +85,27 @@ class ListProceseForm extends React.Component{
           pageText= 'Pagina'
           ofText= 'din'
           rowsText= 'randuri'
+          getTrProps={(state, rowInfo) => {
+            if (rowInfo && rowInfo.row) {
+              return {
+                onClick: (e) => {
+                  this.setState({ selected: rowInfo.original})
+                }
+              }
+            } else {
+              return {}
+            }
+          }}
         />
       </div>
     )
   }
 }
 
-export default ListProceseForm;
+function mapStateToProps(state) {
+  return {
+    selectedProces: state.selected
+  }
+}
+
+export default connect(mapStateToProps) (ListProceseForm);
