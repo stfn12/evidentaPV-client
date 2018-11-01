@@ -85,7 +85,7 @@ class EditChitantaForm extends React.Component{
                 <Form.Field error={!!errors.cnp}>
                   <label htmlFor="cnp">CNP</label>
                   <input
-                    type="number"
+                    type="text"
                     id="cnp"
                     name="cnp"
                     placeholder="cnp"
@@ -150,7 +150,7 @@ EditChitantaForm.propTypes ={
   chitanta: PropTypes.shape({
     _id: PropTypes.string.isRequired,
     contravenient: PropTypes.string.isRequired,
-    cnp: PropTypes.number.isRequired,
+    cnp: PropTypes.string.isRequired,
     numar: PropTypes.number.isRequired,
     data: PropTypes.string.isRequired,
     suma: PropTypes.number.isRequired

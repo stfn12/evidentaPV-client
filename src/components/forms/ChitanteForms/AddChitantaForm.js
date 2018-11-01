@@ -60,7 +60,7 @@ class AddChitantaForm extends React.Component {
 
         <Form.Field error={!!errors.cnp}>
           <label htmlFor="cnp">CNP</label>
-          <input type = "number"
+          <input type = "text"
                  id="cnp"
                  name="cnp"
                  placeholder="cnp"

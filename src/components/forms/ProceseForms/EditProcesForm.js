@@ -148,7 +148,7 @@ class EditProcesForm extends React.Component{
               <Form.Field error={!!errors.cnp}>
                 <label htmlFor="cnp">CNP</label>
                 <input
-                  type="number"
+                  type="text"
                   id="cnp"
                   name="cnp"
                   placeholder="cnp"
@@ -229,7 +229,7 @@ EditProcesForm.propTypes ={
     data_intocmire: PropTypes.string.isRequired,
     marca: PropTypes.number.isRequired,
     contravenient: PropTypes.string.isRequired,
-    cnp: PropTypes.number.isRequired,
+    cnp: PropTypes.string.isRequired,
     adresa: PropTypes.string.isRequired,
     localitate: PropTypes.string.isRequired,
     suma: PropTypes.number.isRequired,

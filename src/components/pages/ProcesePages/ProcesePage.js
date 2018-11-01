@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { DateRange } from 'react-date-range';
-import {Divider} from 'semantic-ui-react'
+import { Divider } from "semantic-ui-react";
 import {allProceseSelector} from '../../../reducers/procese';
 import ProcesCtA from '../../ctas/ProcesCtA';
 import {edit} from '../../../actions/procese';
@@ -29,11 +29,10 @@ class ProcesePage extends React.Component{
         <ProcesCtA />
         <div align="center">
           <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>
-          {/*<Button onClick={this.onSubmit} primary size="medium">Afiseaza</Button>*/}
         </div>
         <Divider/>
-        <div>
-        <ListProceseForm endDate={this.state.endDate} startDate={this.state.startDate}/>
+        <div align="center">
+          <ListProceseForm endDate={this.state.endDate} startDate={this.state.startDate}/>
         </div>
       </div>
     );

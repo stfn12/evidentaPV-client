@@ -4,12 +4,11 @@ import moment from "moment";
 import ReactTable from "react-table";
 import ReactExport from "react-data-export";
 import { Button, Icon } from "semantic-ui-react";
-
 const ExcelFile = ReactExport.ExcelFile;
 const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
 const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
-class ListProceseForm extends React.Component{
+class ListProceseforControlorForm extends React.Component{
   state = {
     loading: true,
     procese: {},
@@ -17,16 +16,28 @@ class ListProceseForm extends React.Component{
     direction: null,
     startDate: null,
     endDate: null,
-    selected: null
+    selected: null,
+    controlor : null
+  };
+
+  componentWillReceiveProps(props) {
+    this.setState({
+      startDate: props.startDate,
+      endDate: props.endDate,
+      controlor: props.controlor
+    })
   };
 
   loadProcese(){
-    if(this.props.startDate === null || this.props.endDate === null)
+    if(this.props.controlor.marca === null)
       return;
-    axios.get(`/api/procese/searchDate?from=${this.props.startDate}&to=${this.props.endDate}`)
-      .then(res => this.setState({loading: false, procese: res.data.procese}))
+    else if(this.props.startDate === null || this.props.endDate === null)
+      axios.get(`/api/procese/search?controlor=${this.props.controlor.marca}`)
+        .then(res => this.setState({loading: false, procese: res.data.procese}));
+    else
+      axios.get(`/api/procese/searchDate?controlor=${this.props.controlor.marca}&from=${this.props.startDate}&to=${this.props.endDate}`)
+        .then(res => this.setState({loading: false, procese: res.data.procese}))
   };
-
 
   render(){
     const { procese, loading } = this.state;
@@ -64,7 +75,7 @@ class ListProceseForm extends React.Component{
       Header: 'Adresa',
       accessor: 'adresa'
     }, {
-      Header: 'Mod solutionare',
+      Header: 'Localitate',
       accessor: 'localitate',
       maxWidth: 90
     }, {
@@ -81,7 +92,7 @@ class ListProceseForm extends React.Component{
     }
     return(
       <div style={{textAlign:"center"}}>
-        <ExcelFile filename={`Procese ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`}  element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+        <ExcelFile filename={`Procese marca ${this.props.controlor.marca} ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
           <ExcelSheet data={procese} name="Procese verbale">
             <ExcelColumn label="Serie" value="serie"/>
             <ExcelColumn label="Numar" value="numar"/>
@@ -125,4 +136,4 @@ class ListProceseForm extends React.Component{
   }
 }
 
-export default ListProceseForm;
+export default ListProceseforControlorForm;

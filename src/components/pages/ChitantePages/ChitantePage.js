@@ -3,10 +3,24 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import ChitantaCtA from "../../ctas/ChitantaCtA";
 import ListChitanteForm from "../../forms/ChitanteForms/ListChitanteForm";
+import { DateRange } from "react-date-range";
+import moment from "moment";
+import { Button, Segment } from "semantic-ui-react";
 
 class ChitantePage extends React.Component{
   state = {
-    chitanta: null
+    chitanta: null,
+    startDate: null,
+    endDate: null
+  };
+
+  handleSelect = range => {
+    this.setState({startDate: moment(range.startDate._d).format('YYYY-MM-DD'),
+      endDate: moment(range.endDate._d).format('YYYY-MM-DD')});
+  };
+
+  onClick = () =>{
+    this.setState({startDate: null, endDate: null});
   };
 
   render(){
@@ -14,7 +28,15 @@ class ChitantePage extends React.Component{
       <div>
         <h1 align="center">Chitante</h1>
         <ChitantaCtA />
-        <ListChitanteForm/>
+        <div align="center">
+          <Segment>
+          <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>
+          <Button onClick={this.onClick}>Reseteaza data</Button>
+          </Segment>
+        </div>
+        <div>
+        <ListChitanteForm endDate={this.state.endDate} startDate={this.state.startDate}/>
+        </div>
       </div>
     );
   }

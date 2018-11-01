@@ -64,7 +64,7 @@ class EditControlorForm extends React.Component{
                 <Form.Field error={!!errors.marca}>
                   <label htmlFor="marca">Marca</label>
                   <input
-                    type="number"
+                    type="text"
                     id="marca"
                     name="marca"
                     placeholder="marca"
@@ -101,7 +101,7 @@ EditControlorForm.propTypes ={
   submit: PropTypes.func.isRequired,
   controlor: PropTypes.shape({
     _id: PropTypes.string.isRequired,
-    marca: PropTypes.number.isRequired,
+    marca: PropTypes.string.isRequired,
     nume: PropTypes.string.isRequired
   }).isRequired
 };

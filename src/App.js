@@ -16,6 +16,7 @@ import EditChitantaPage from "./components/pages/ChitantePages/EditChitantaPage"
 import ControloriPage from "./components/pages/ControloriPages/ControloriPage";
 import AddControlorPage from "./components/pages/ControloriPages/AddControlorPage";
 import EditControlorPage from "./components/pages/ControloriPages/EditControlorPage";
+import ReportsControlorPage from "./components/pages/ControloriPages/ReportsControlorPage";
 
 const App = ({location, isAuthenticated}) => (
   <div className="ui container">
@@ -31,6 +32,7 @@ const App = ({location, isAuthenticated}) => (
     <UserRoute location ={location} path="/controlori" exact component={ControloriPage}/>
     <UserRoute location ={location} path="/controlori/new" exact component={AddControlorPage}/>
     <UserRoute location ={location} path="/controlori/edit" exact component={EditControlorPage}/>
+    <UserRoute location ={location} path="/controlori/reports" exact component={ReportsControlorPage}/>
 </div>);
 
 App.propTypes ={

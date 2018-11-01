@@ -45,7 +45,7 @@ class AddControlorForm extends React.Component {
 
         <Form.Field error={!!errors.marca}>
           <label htmlFor="marca">Marca</label>
-          <input type = "number"
+          <input type = "text"
                  id="marca"
                  name="marca"
                  placeholder="marca"

@@ -1,7 +1,12 @@
 import React from 'react';
 import axios from "axios";
-import ReactTable from 'react-table'
-import 'react-table/react-table.css'
+import ReactTable from 'react-table';
+import 'react-table/react-table.css';
+import ReactExport from "react-data-export";
+import { Button, Icon } from "semantic-ui-react";
+const ExcelFile = ReactExport.ExcelFile;
+const ExcelSheet = ReactExport.ExcelFile.ExcelSheet;
+const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 class ListControloriForm extends React.Component{
   state = {
@@ -33,6 +38,12 @@ class ListControloriForm extends React.Component{
 
     return(
       <div style={{textAlign:"center"}}>
+        <ExcelFile filename={`Controlori`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+          <ExcelSheet data={controlori} name="Controlori">
+            <ExcelColumn label="Marca" value="marca"/>
+            <ExcelColumn label="Nume" value="nume"/>
+          </ExcelSheet>
+        </ExcelFile>
         <ReactTable
           data={controlori}
           columns={columns}
