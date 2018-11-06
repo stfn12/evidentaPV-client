@@ -34,7 +34,7 @@ class ReportsControlorPage extends React.Component{
   render(){
     return(
       <div>
-        <h1 align="center">Rapoarte controlori</h1>
+        <h1 align="center" style={{padding: '15px'}}>Rapoarte controlori</h1>
         <div align="center">
           <Segment>
           <SearchControlorForm onControlorSelect={ this.onControlorSelect } />

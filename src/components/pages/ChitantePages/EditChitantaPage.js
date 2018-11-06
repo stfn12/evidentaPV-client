@@ -20,7 +20,7 @@ class EditChitantaPage extends React.Component{
     return(
       <div>
         <Segment>
-          <h1>Cauta chitanta</h1>
+          <h2 style={{padding: '15px'}}>Cauta chitanta</h2>
           <SearchChitantaForm onChitantaSelect={ this.onChitantaSelect } />
           {this.state.chitanta &&
           <EditChitantaForm submit={this.editChitanta} chitanta={this.state.chitanta}/>}

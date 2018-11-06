@@ -21,7 +21,7 @@ class EditProcesPage extends React.Component{
     return(
       <div>
         <Segment>
-          <h1>Cauta PV</h1>
+          <h1 style={{padding: '15px'}}>Cauta PV</h1>
           <SearchProcesForm onProcesSelect = { this.onProcesSelect } />
           {this.state.proces &&
           <EditProcesForm submit={this.editProces} proces={this.state.proces}/>}

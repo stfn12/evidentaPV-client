@@ -20,7 +20,7 @@ class EditControlorPage extends React.Component{
     return(
       <div>
         <Segment>
-          <h1>Cauta controlor</h1>
+          <h1 style={{padding: '15px'}}>Cauta controlor</h1>
           <SearchControlorForm onControlorSelect={ this.onControlorSelect } />
           {this.state.controlor &&
           <EditControlorForm submit={this.editControlor} controlor={this.state.controlor}/>}

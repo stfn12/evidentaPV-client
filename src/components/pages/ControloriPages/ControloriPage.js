@@ -12,7 +12,7 @@ class ControloriPage extends React.Component{
   render(){
     return(
       <div>
-        <h1 align="center">Controlori</h1>
+        <h1 align="center" style={{padding: '15px'}}>Controlori</h1>
         <ControlorCtA />
         <ListControloriForm/>
       </div>

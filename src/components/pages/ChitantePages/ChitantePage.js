@@ -26,7 +26,7 @@ class ChitantePage extends React.Component{
   render(){
     return(
       <div>
-        <h1 align="center">Chitante</h1>
+        <h1 align="center" style={{padding: '15px'}}>Chitante</h1>
         <ChitantaCtA />
         <div align="center">
           <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>

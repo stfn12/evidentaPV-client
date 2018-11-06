@@ -12,7 +12,7 @@ class AddProcesPage extends React.Component{
   render(){
     return(
       <div>
-        <h1>Adauga PV</h1>
+        <h1 style={{padding: '15px'}}>Adauga PV</h1>
         <AddProcesForm submit={this.submit} addProces={addProces}/>
       </div>
     );

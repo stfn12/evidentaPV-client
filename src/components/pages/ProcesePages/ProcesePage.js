@@ -29,7 +29,7 @@ class ProcesePage extends React.Component{
   render(){
     return(
       <div>
-        <h1 align="center">Procese verbale</h1>
+        <h1 align="center" style={{padding: '15px'}}>Procese verbale</h1>
         <ProcesCtA />
         <div align="center">
           <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>

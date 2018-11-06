@@ -12,7 +12,7 @@ class AddChitantaPage extends React.Component{
   render(){
     return(
       <div>
-        <h1>Adauga chitanta</h1>
+        <h1 style={{padding: '15px'}}>Adauga chitanta</h1>
         <AddChitantaForm submit={this.submit} addChitanta={addChitanta}/>
       </div>
     );

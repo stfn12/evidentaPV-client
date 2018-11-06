@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import * as actions from '../../actions/auth';
 
 const TopNavigation = ({user, logout}) => (
-  <Menu pointing >
+  <Menu pointing size='massive'>
     <Menu.Item as={Link} to="/procese"><Icon name='list'/>Procese verbale</Menu.Item>
     <Menu.Item as={Link} to="/chitante"><Icon name='file'/> Chitante</Menu.Item>
     <Menu.Item as={Link} to="/controlori"><Icon name='users'/> Controlori</Menu.Item>

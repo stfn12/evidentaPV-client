@@ -16,7 +16,7 @@ class ListControloriForm extends React.Component{
     direction: null
   };
 
-  componentDidMount(){
+  componentWillMount(){
     axios.get(`/api/controlori/search`)
       .then(res => this.setState({loading: false, controlori: res.data.controlori}));
   };

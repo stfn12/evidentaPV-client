@@ -12,7 +12,7 @@ class AddControlorPage extends React.Component{
   render(){
     return(
       <div>
-        <h1>Adauga controlor</h1>
+        <h1 style={{padding: '15px'}}>Adauga controlor</h1>
         <AddControlorForm submit={this.submit} addControlor={addControlor()}/>
       </div>
     );
