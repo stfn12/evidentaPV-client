@@ -20,28 +20,20 @@ class ListProceseforControlorForm extends React.Component{
     controlor : null
   };
 
-  componentWillReceiveProps(props) {
-    this.setState({
-      startDate: props.startDate,
-      endDate: props.endDate,
-      controlor: props.controlor
-    })
-  };
-
-  loadProcese(){
-    if(this.props.controlor.marca === null)
+  componentWillReceiveProps(nextProps){
+    this.setState({startDate: nextProps.startDate, endDate: nextProps.endDate, controlor: nextProps.controlor});
+    if(nextProps.controlor.marca === null)
       return;
-    else if(this.props.startDate === null || this.props.endDate === null)
-      axios.get(`/api/procese/search?controlor=${this.props.controlor.marca}`)
+    else if(nextProps.startDate === null || nextProps.endDate === null)
+      axios.get(`/api/procese/search?controlor=${nextProps.controlor.marca}`)
         .then(res => this.setState({loading: false, procese: res.data.procese}));
     else
-      axios.get(`/api/procese/searchDate?controlor=${this.props.controlor.marca}&from=${this.props.startDate}&to=${this.props.endDate}`)
+      axios.get(`/api/procese/searchDate?controlor=${nextProps.controlor.marca}&from=${nextProps.startDate}&to=${nextProps.endDate}`)
         .then(res => this.setState({loading: false, procese: res.data.procese}))
   };
 
   render(){
     const { procese, loading } = this.state;
-    this.loadProcese();
     const columns = [{
       Header: 'Serie',
       accessor: 'serie',
@@ -92,7 +84,7 @@ class ListProceseforControlorForm extends React.Component{
     }
     return(
       <div style={{textAlign:"center"}}>
-        <ExcelFile filename={`Procese marca ${this.props.controlor.marca} ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+        <ExcelFile filename={`Procese marca ${this.props.controlor.marca} ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca excel</Button>}>
           <ExcelSheet data={procese} name="Procese verbale">
             <ExcelColumn label="Serie" value="serie"/>
             <ExcelColumn label="Numar" value="numar"/>

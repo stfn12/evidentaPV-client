@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { DateRange } from 'react-date-range';
-import { Divider } from "semantic-ui-react";
+import { Button, Divider} from "semantic-ui-react";
 import {allProceseSelector} from '../../../reducers/procese';
 import ProcesCtA from '../../ctas/ProcesCtA';
 import {edit} from '../../../actions/procese';
@@ -22,6 +22,10 @@ class ProcesePage extends React.Component{
       endDate: moment(range.endDate._d).format('YYYY-MM-DD')});
   };
 
+  onClick = () =>{
+    this.setState({startDate: null, endDate: null});
+  };
+
   render(){
     return(
       <div>
@@ -29,6 +33,7 @@ class ProcesePage extends React.Component{
         <ProcesCtA />
         <div align="center">
           <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>
+          <Button onClick={this.onClick}>Reseteaza data</Button>
         </div>
         <Divider/>
         <div align="center">

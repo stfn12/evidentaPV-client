@@ -10,7 +10,7 @@ const ExcelColumn = ReactExport.ExcelFile.ExcelColumn;
 
 class ListChitanteForm extends React.Component{
   state = {
-    loading: true,
+    loading: false,
     chitante: [],
     column: null,
     direction: null,
@@ -18,17 +18,23 @@ class ListChitanteForm extends React.Component{
     endDate: null
   };
 
-  loadChitante(){
-    if((this.props.startDate === null && this.props.endDate === null) || (this.props.startDate === undefined && this.props.endDate === undefined))
+  componentWillMount(){
+    axios.get(`/api/chitante/search`)
+      .then(res => this.setState({loading: false, chitante: res.data.chitante}));
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({loading: true, startDate: nextProps.startDate, endDate: nextProps.endDate});
+    if((nextProps.startDate === null && nextProps.endDate === null) || (nextProps.startDate === undefined && nextProps.endDate === undefined))
       axios.get(`/api/chitante/search`)
         .then(res => this.setState({loading: false, chitante: res.data.chitante}));
-    else axios.get(`/api/chitante/searchDate?from=${this.props.startDate}&to=${this.props.endDate}`)
+    else axios.get(`/api/chitante/searchDate?from=${nextProps.startDate}&to=${nextProps.endDate}`)
       .then(res => this.setState({loading: false, chitante: res.data.chitante}))
   };
 
   render(){
     const { chitante, loading } = this.state;
-    this.loadChitante();
+    //this.loadChitante();
     if(loading){
       return(<div align="center">Se incarca...</div>)
     }
@@ -52,7 +58,7 @@ class ListChitanteForm extends React.Component{
       }];
     return(
       <div style={{textAlign:"center"}}>
-        <ExcelFile filename={`Chitante ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+        <ExcelFile filename={`Chitante ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca excel</Button>}>
           <ExcelSheet data={chitante} name="Chitante">
             <ExcelColumn label="Contravenient" value="contravenient"/>
             <ExcelColumn label="CNP" value="cnp"/>
@@ -70,6 +76,21 @@ class ListChitanteForm extends React.Component{
           pageText= 'Pagina'
           ofText= 'din'
           rowsText= 'randuri'
+          getTrProps={(state, rowInfo) => {
+            if (rowInfo && rowInfo.row) {
+              return {
+                onClick: (e) => {
+                  this.setState({ selected: rowInfo.original})
+                },
+                style: {
+                  background: rowInfo.original === this.state.selected ? '#00afec' : 'white',
+                  color: rowInfo.original === this.state.selected ? 'white' : 'black'
+                }
+              }
+            } else {
+              return {}
+            }
+          }}
         />
       </div>
     )

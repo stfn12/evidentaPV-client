@@ -5,7 +5,7 @@ import ChitantaCtA from "../../ctas/ChitantaCtA";
 import ListChitanteForm from "../../forms/ChitanteForms/ListChitanteForm";
 import { DateRange } from "react-date-range";
 import moment from "moment";
-import { Button, Segment } from "semantic-ui-react";
+import { Button, Divider} from "semantic-ui-react";
 
 class ChitantePage extends React.Component{
   state = {
@@ -29,13 +29,12 @@ class ChitantePage extends React.Component{
         <h1 align="center">Chitante</h1>
         <ChitantaCtA />
         <div align="center">
-          <Segment>
           <DateRange startDate={null} endDate={null} onChange={this.handleSelect}/>
           <Button onClick={this.onClick}>Reseteaza data</Button>
-          </Segment>
         </div>
+        <Divider/>
         <div>
-        <ListChitanteForm endDate={this.state.endDate} startDate={this.state.startDate}/>
+          <ListChitanteForm endDate={this.state.endDate} startDate={this.state.startDate}/>
         </div>
       </div>
     );

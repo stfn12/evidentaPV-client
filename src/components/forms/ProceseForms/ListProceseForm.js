@@ -20,17 +20,23 @@ class ListProceseForm extends React.Component{
     selected: null
   };
 
-  loadProcese(){
-    if(this.props.startDate === null || this.props.endDate === null)
+  componentWillMount(){
+    axios.get(`/api/procese/search`)
+      .then(res => this.setState({loading: false, procese: res.data.procese}));
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.setState({loading: true, startDate: nextProps.startDate, endDate: nextProps.endDate});
+    if(nextProps.startDate === null || nextProps.endDate === null)
       return;
-    axios.get(`/api/procese/searchDate?from=${this.props.startDate}&to=${this.props.endDate}`)
-      .then(res => this.setState({loading: false, procese: res.data.procese}))
+    else
+      axios.get(`/api/procese/searchDate?from=${nextProps.startDate}&to=${nextProps.endDate}`)
+        .then(res => this.setState({loading: false, procese: res.data.procese}))
   };
 
 
   render(){
     const { procese, loading } = this.state;
-    this.loadProcese();
     const columns = [{
       Header: 'Serie',
       accessor: 'serie',
@@ -81,7 +87,7 @@ class ListProceseForm extends React.Component{
     }
     return(
       <div style={{textAlign:"center"}}>
-        <ExcelFile filename={`Procese ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`}  element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+        <ExcelFile filename={`Procese ${this.props.startDate !== null ? moment(this.props.startDate).format("DD-MM-YYYY") :''} __ ${this.props.endDate !== null ? moment(this.props.endDate).format("DD-MM-YYYY") :''}`}  element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca excel</Button>}>
           <ExcelSheet data={procese} name="Procese verbale">
             <ExcelColumn label="Serie" value="serie"/>
             <ExcelColumn label="Numar" value="numar"/>

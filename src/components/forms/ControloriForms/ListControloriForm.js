@@ -17,7 +17,6 @@ class ListControloriForm extends React.Component{
   };
 
   componentDidMount(){
-    this.setState({loading: true});
     axios.get(`/api/controlori/search`)
       .then(res => this.setState({loading: false, controlori: res.data.controlori}));
   };
@@ -38,7 +37,7 @@ class ListControloriForm extends React.Component{
 
     return(
       <div style={{textAlign:"center"}}>
-        <ExcelFile filename={`Controlori`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca PDF</Button>}>
+        <ExcelFile filename={`Controlori`} element={<Button icon labelPosition='right'><Icon name='print' size='big'/>Descarca excel</Button>}>
           <ExcelSheet data={controlori} name="Controlori">
             <ExcelColumn label="Marca" value="marca"/>
             <ExcelColumn label="Nume" value="nume"/>
@@ -53,6 +52,21 @@ class ListControloriForm extends React.Component{
           pageText= 'Pagina'
           ofText= 'din'
           rowsText= 'randuri'
+          getTrProps={(state, rowInfo) => {
+            if (rowInfo && rowInfo.row) {
+              return {
+                onClick: (e) => {
+                  this.setState({ selected: rowInfo.original})
+                },
+                style: {
+                  background: rowInfo.original === this.state.selected ? '#00afec' : 'white',
+                  color: rowInfo.original === this.state.selected ? 'white' : 'black'
+                }
+              }
+            } else {
+              return {}
+            }
+          }}
         />
       </div>
     )
